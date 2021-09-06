@@ -1,4 +1,7 @@
+import { useState } from 'react';
+
 import './App.css';
+
 
 const questionsArr = [
   {
@@ -11,12 +14,15 @@ const questionsArr = [
   }
 ]
 
-const App = () => {
+
+const App = () => { 
+  const [question, setQuestion] = useState(0);
+
   return (
     <div className="App">
       <header className="App-header">
         <div className="App-header-title">
-          <h1>관광통역안내사 면접 준비</h1>
+          <h1>관광통역안내사 면접 시뮬레이터</h1>
         </div>
         <div className="App-header-nav">
           <nav>
