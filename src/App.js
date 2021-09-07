@@ -108,7 +108,7 @@ const App = () => {
 
     setQuestion(questionsArr[randomIdx]["contents"]);
     setNumber(questionsArr[randomIdx]["number"]);
-  }
+  };
 
   return (
     <div className="App">
@@ -125,18 +125,19 @@ const App = () => {
         </div>
       </header>
       <section className="App-contents-section">
-        <div>
+        <div className="contents-nav-part">
           <div className="select-part">
             <button className="random-btn" onClick={randomPick}>랜덤</button>
             <select>
               <option value=""></option>
             </select>
+            <button>선택 문제 보기</button>
           </div>
           <div className="list-part">
             <a className="question-list-href" href="/list">문제 번호-리스트 보러가기</a>
           </div>
         </div>
-        <div>
+        <div className="question-part">
           <h2 className="question-title">{number + '. '} {question}</h2>
           <p className="timer">00:00</p>
         </div>

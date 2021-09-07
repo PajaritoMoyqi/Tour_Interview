@@ -1,3 +1,22 @@
+/* @import 'reset.css'; */
+
 .App {
+  margin: 100px 600px;
+}
+
+.App-header, .question-part {
+  display: flex;
+  justify-content: center;
+}
+
+.App-contents-section {
   text-align: center;
+}
+
+.contents-nav-part {
+  display: flex;
+  justify-content: space-between;
+}
+.contents-nav-part > div {
+  display: inline-block;
 }
