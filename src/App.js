@@ -12,11 +12,19 @@ const questionsArr = [
     number: 2,
     contents: "관광통역안내사를 하고자 하는 동기는 무엇인가?"
   }
-]
+];
 
 
 const App = () => { 
-  const [question, setQuestion] = useState(0);
+  const [question, setQuestion] = useState('');
+  const [number, setNumber] = useState(0);
+
+  const randomPick = () => {
+    const randomIdx = Math.floor(Math.random()*questionsArr.length);
+
+    setQuestion(questionsArr[randomIdx]["contents"]);
+    setNumber(questionsArr[randomIdx]["number"]);
+  }
 
   return (
     <div className="App">
@@ -35,7 +43,7 @@ const App = () => {
       <section className="App-contents-section">
         <div>
           <div className="select-part">
-            <button className="random-btn">랜덤</button>
+            <button className="random-btn" onClick={randomPick}>랜덤</button>
             <select>
               <option value=""></option>
             </select>
@@ -45,7 +53,7 @@ const App = () => {
           </div>
         </div>
         <div>
-          <h2 className="question-title"> </h2>
+          <h2 className="question-title">{number}. {question}</h2>
           <p className="timer">00:00</p>
         </div>
       </section>
