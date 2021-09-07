@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "관통사 2차 면접시뮬",
+  "name": "관광통역안내사 2차 면접 시뮬레이터",
   "icons": [
     {
       "src": "favicon.ico",

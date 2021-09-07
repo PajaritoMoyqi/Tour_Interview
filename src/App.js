@@ -137,7 +137,7 @@ const App = () => {
           </div>
         </div>
         <div>
-          <h2 className="question-title">{number}. {question}</h2>
+          <h2 className="question-title">{number + '. '} {question}</h2>
           <p className="timer">00:00</p>
         </div>
       </section>
