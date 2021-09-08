@@ -101,7 +101,7 @@ const questionsArr = [
 
 const App = () => { 
   const [question, setQuestion] = useState('');
-  const [number, setNumber] = useState(0);
+  const [number, setNumber] = useState(false);
 
   const randomPick = () => {
     const randomIdx = Math.floor(Math.random()*questionsArr.length);
@@ -118,9 +118,9 @@ const App = () => {
         </div>
         <div className="App-header-nav">
           <nav>
-            <ul>개발자 Github</ul>
-            <ul>개발자 프로젝트 블로그</ul>
-            <ul>연락처</ul>
+            <ul><a href="https://github.com/PajaritoMoyqi" rel="noreferrer" target='_blank'>개발자 Github</a></ul>
+            <ul><a href="https://www.pajaritoprojects.com/" rel="noreferrer" target='_blank'>개발자 프로젝트 블로그</a></ul>
+            <ul>연락처 : pajaritomoyqi@protonmail.ch</ul>
           </nav>
         </div>
       </header>
@@ -138,7 +138,7 @@ const App = () => {
           </div>
         </div>
         <div className="question-part">
-          <h2 className="question-title">{number + '. '} {question}</h2>
+          <h2 className="question-title">{number && number + '. '} {question && question}</h2>
           <p className="timer">00:00</p>
         </div>
       </section>
