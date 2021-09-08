@@ -110,6 +110,15 @@ const App = () => {
     setNumber(questionsArr[randomIdx]["number"]);
   };
 
+  const pickQuestion = e => {
+    const selectedIdx = e.target.value;
+
+    if(selectedIdx==="wrong") return;
+
+    setQuestion(questionsArr[selectedIdx]["contents"]);
+    setNumber(questionsArr[selectedIdx]["number"]);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -127,11 +136,13 @@ const App = () => {
       <section className="App-contents-section">
         <div className="contents-nav-part">
           <div className="select-part">
+            <label>문제 랜덤 픽</label>
             <button className="random-btn" onClick={randomPick}>랜덤</button>
-            <select>
-              <option value=""></option>
+            <label>문제 번호로 고르기</label>
+            <select className="number-select" onClick={pickQuestion}>
+              <option selected disabled value="wrong">번호 픽</option>
+              {questionsArr.map((q, idx)=> <option key={idx} value={idx}>{idx+1}번</option>)}
             </select>
-            <button>선택 문제 보기</button>
           </div>
           <div className="list-part">
             <a className="question-list-href" href="/list">문제 번호-리스트 보러가기</a>
