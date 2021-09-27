@@ -1,5 +1,7 @@
 ## 관통사 2차 면접시험 기출문제를 인터넷에서 수합해서 면접 준비에 도움을 줄 수 있도록 하는 사이트입니다.
 
+링크 : https://pajaritomoyqi.github.io/Tour_Interview/
+
 <br>
 
 - 작업시간 및 패치노트
