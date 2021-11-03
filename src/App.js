@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import './App.css';
 
@@ -145,7 +146,7 @@ const App = () => {
             </select>
           </div>
           <div className="list-part">
-            <a className="question-list-href" href="/list">문제 번호-리스트 보러가기</a>
+            <Link className="question-list-href" to="/list">문제 번호-리스트 보러가기</Link>
           </div>
         </div>
         <div className="question-part">
